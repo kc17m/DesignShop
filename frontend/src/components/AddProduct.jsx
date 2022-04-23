@@ -21,9 +21,6 @@ const AddProduct = () => {
     }, [])
 
 
-
-
-
     const addNewProduct = (e) => {
         e.preventDefault()
 
@@ -72,7 +69,7 @@ const AddProduct = () => {
                 <input type="text" name="linkShop" value={linkShop} onChange={(e) => setLinkShop(e.target.value)} /> <br />
                 <button onClick={addNewProduct}>Add to Product List</button>
             </form>
-            <Link to={"/"}>  <h5>Back to Product List</h5></Link>
+            <Link to={"/"}>  <h4 className="addButton">Back to Product List</h4></Link>
         </section>
         <div>{error}</div>
     </div>);

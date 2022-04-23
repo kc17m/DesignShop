@@ -5,7 +5,7 @@ const ProductList = (props) => {
     return (
         <div>
             <h2>All Products - TEST</h2>
-            <Link to={"/newproducts"}><h5>Add Products</h5></Link>
+            <Link to={"/newproducts"}><h3 className="addButton">Add Products - Click here</h3></Link>
 
             {props.products.map(product =>
                 <section key={product._id}>

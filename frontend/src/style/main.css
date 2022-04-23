@@ -17,8 +17,25 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
 a:hover {
   color: grey;
+}
+
+.addButton {
+  width: 70%;
+  margin: 2% auto;
+  background: rgb(90, 85, 79);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3%;
+  text-align: center;
+}
+.addButton:hover {
+  background: grey;
+  color: #000;
 }
 
 .addprod {

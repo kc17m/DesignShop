@@ -25,9 +25,29 @@ img {
     width: 100%
 }
 
-a:hover {
-    color: grey;
+a {
+    text-decoration: none;
+    &:hover {
+        color: grey;
+    }
 }
+
+.addButton {
+    width: 70%;
+    margin: 2% auto;
+    background: rgb(90, 85, 79);
+    color: #fff;
+    border-radius: 5px;
+    padding: 3%;
+    text-align: center;
+    &:hover {
+        background: grey;
+        color: #000
+    }
+}
+
+
+
 
 .addprod {
     width: 80%;
