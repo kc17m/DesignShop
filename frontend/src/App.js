@@ -13,12 +13,14 @@ function App() {
     fetch(apiBaseUrl + "/products")
       .then((response) => response.json())
       .then(productsArr => setProducts(productsArr))
+    console.log(products)
   }, [])
 
 
   return (
     <div className="App">
       <h3>test - APP.js</h3>
+      {console.log(products)}
       <ProductList products={products} setProducts={setProducts} />
 
 

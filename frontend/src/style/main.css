@@ -8,9 +8,9 @@
   margin: 2%;
 }
 
-section:nth-of-type(1).figure, section:nth-of-type(7).figure, section:nth-of-type(14).figure {
-  width: 30%;
-  margin: 2% 20%;
+.prodList {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
 }
 
 img {

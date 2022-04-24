@@ -40,11 +40,12 @@ app.get("/products/:id", (req, res) => {
 //POST
 app.post("/newproducts", (req, res) => {
     const newProduct = {
-        ProductName: req.body.productname,
+        ProductName: req.body.productName,
         Company: req.body.company,
         Price: req.body.price,
-        ProductLink: req.body.productlink,
-        LinkShop: req.body.linkshop
+        ProductLink: req.body.productLink,
+        LinkShop: req.body.linkShop
+
     }
     ProductsDAO
         .insertProduct(newProduct)

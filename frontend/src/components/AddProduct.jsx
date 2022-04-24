@@ -4,11 +4,11 @@ import { apiBaseUrl } from "../api";
 
 const AddProduct = () => {
 
-    const [productName, setProductName] = useState("");
-    const [company, setCompany] = useState("");
-    const [price, setPrice] = useState("");
-    const [productLink, setProductLink] = useState("");
-    const [linkShop, setLinkShop] = useState("");
+    const [productName, setProductName] = useState("Sample Product");
+    const [company, setCompany] = useState("Sample Company");
+    const [price, setPrice] = useState("$58.00");
+    const [productLink, setProductLink] = useState("https://samplelink");
+    const [linkShop, setLinkShop] = useState("https://sampleURL");
 
     const [error, setError] = useState("")
 
@@ -18,11 +18,20 @@ const AddProduct = () => {
         fetch(apiBaseUrl + "/products")
             .then((response) => response.json())
             .then(productsArr => setProduct(productsArr))
+        console.log(product)
     }, [])
 
 
     const addNewProduct = (e) => {
         e.preventDefault()
+
+        const postProduct = {
+            ProductName: productName,
+            Company: company,
+            Price: price,
+            ProductLink: productLink,
+            LinkShop: linkShop
+        }
 
         fetch(apiBaseUrl + "/newproducts", {
             method: "POST",
@@ -30,7 +39,7 @@ const AddProduct = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                ProductName: productName
+                postProduct
             })
 
         })
@@ -39,11 +48,13 @@ const AddProduct = () => {
                 if (data.err) setError(data.err)
                 else {
                     setError("")
-                    setProductName("")
-                    setCompany("")
-                    setPrice("")
-                    setProductLink("")
-                    setLinkShop("")
+
+                    setProductName("Sample Product")
+                    setCompany("Sample Company")
+                    setPrice("$58.00")
+                    setProductLink("https://samplelink")
+                    setLinkShop("https://sampleURL")
+
                     setProduct(data)
                 }
             })

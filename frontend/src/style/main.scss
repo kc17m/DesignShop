@@ -9,11 +9,19 @@
     margin: 2% ;
 }
 
-section:nth-of-type(1).figure, section:nth-of-type(7).figure, section:nth-of-type(14).figure {
-    width: 30%;
-    margin: 2% 20%;
-
+.prodList {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    // &:first-child {
+    //     grid-template-columns: 100%;
+    // }
 }
+
+//  .prodList section:nth-of-type(3) {
+//      display: grid;
+//      grid-template-columns:90%;
+
+// }
 
 // section:nth-of-type(2).figure, section:nth-of-type(3).figure, section:nth-of-type(4).figure  
 // section:nth-of-type(5).figure, section:nth-of-type(6).figure  {

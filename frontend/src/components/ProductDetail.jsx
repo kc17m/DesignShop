@@ -22,9 +22,11 @@ const ProductDetail = () => {
     return (
         <div>
             <h2>Product - Detail - TEST</h2>
-
-            {/* {<p>{productDetail.Company}</p>} */}
-            <Link to="/"> <button> Go Back</button></Link>
+            <figure><img src={productDetail.ProductLink} alt="" /></figure>
+            <p>{productDetail.ProductName}</p>
+            <p>{productDetail.Company}</p>
+            <p>{productDetail.Price}</p>
+            <Link to="/"> <button>Go Back</button></Link>
 
 
         </div >
