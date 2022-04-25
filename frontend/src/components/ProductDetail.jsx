@@ -15,6 +15,8 @@ const ProductDetail = () => {
                 console.log(productData)
                 if (!productData.err) {
                     setProductDetail(productData)
+                    console.log(productData)
+                    console.log(productDetail)
                 }
             })
     }, [productId])
@@ -22,7 +24,7 @@ const ProductDetail = () => {
     return (
         <div>
             <h2>Product - Detail - TEST</h2>
-            <figure><img src={productDetail.ProductLink} alt="" /></figure>
+            <figure><img src={productDetail.ProductLink} alt="product" /></figure>
             <p>{productDetail.ProductName}</p>
             <p>{productDetail.Company}</p>
             <p>{productDetail.Price}</p>
